@@ -1,0 +1,28 @@
+.example-card {
+    max-width: 400px;
+    margin-top: 1%;
+  }
+  
+  .example-header-image {
+    background-image: url('http://3.imimg.com/data3/QY/OD/GLADMIN-18826/stop-watch-500x500.jpg');
+    background-size: cover;
+  }
+
+  .mat-card-title {
+    font-size:24px !important;
+    font-weight: 500 !important;
+}
+
+.bigger {
+    font-size:30px !important;
+    font-weight: 800 !important;
+}
+
+  .blink {
+    animation: blinker 1s linear infinite;
+  }
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }

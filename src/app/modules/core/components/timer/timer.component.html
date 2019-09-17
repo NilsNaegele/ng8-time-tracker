@@ -1,0 +1,39 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Stop Watch</mat-card-title>
+      <mat-card-subtitle>Track my Time</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div *ngIf="counter" class="bigger" [ngClass]="{blink: !running }">
+            <span>{{ minutes }}</span><span>{{ seconds }}:</span> <span>{{ milliseconds }}</span>
+        </div>
+        <div *ngIf="!counter" class="bigger">
+                <span>{{ minutes }}</span><span>{{ seconds }}</span><span>{{ milliseconds }}</span>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <div *ngIf="showTimerControls" class="timer-button-container">
+            <button mat-button (click)="startTimer()">
+                {{ startText }}
+            </button>
+            <button  mat-button [disabled]="!counter" [ngClass]="{'disabled': !counter}"
+            (click)="lapTimeSplit()">
+                Lap
+            </button>
+            <button mat-button (click)="clearTimer()">
+                Clear
+            </button>
+            <br>
+            <div *ngFor="let lap of laps; let i = index">
+                <div> &#9873; <b>Lap {{ i + 1 }}</b>  {{ lap }}</div>
+            </div>
+        </div> 
+    </mat-card-actions>
+  </mat-card>
+    <div class="container">
+        <!-- <section class="timer-counter-label"> -->
+      
+        <!-- </section> -->
+
+    </div>  
