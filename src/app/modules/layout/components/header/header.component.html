@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+    <button mat-button class="app-menu-button" (click)="toggleSidenav()">
+            <i class="material-icons">menu</i>
+    </button>
+<span routerLink="/home" routerLinkActive="active">Time Tracker</span>
+<span class="space-between"></span>
+<button mat-icon-button [mat-menu-trigger-for]="menu">
+    <mat-icon>more_vert</mat-icon>
+</button>
+</mat-toolbar>
+<mat-menu x-position="before" #menu="matMenu">
+<button mat-menu-item>Time Tracker 0</button>
+<button mat-menu-item>Time Tracker 1</button>
+<button mat-menu-item>Time Tracker 2</button>
+</mat-menu>
