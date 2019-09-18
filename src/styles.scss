@@ -1,15 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~font-awesome/css/font-awesome.css";
 html,
 body {
   height: 100%;
-}
-body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
 .app {
     height: 100vh; // emmet h100vh
+    background-color: #ff2d55;
   }
 
 // .mat-bottom-sheet-container {

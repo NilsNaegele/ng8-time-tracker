@@ -10,8 +10,8 @@ export class SideNavComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  navigate() {
-    this.router.navigate(['']);
+  navigatePomodoro() {
+    this.router.navigate(['/pomodoro']);
   }
 
   ngOnInit() {
