@@ -1,0 +1,31 @@
+.example-card {
+    max-width: 450px;
+    margin-top: 1%;
+  }
+
+  .mat-card-title {
+    font-size:24px !important;
+    font-weight: 500 !important;
+}
+
+.bigger {
+    font-size:30px !important;
+    font-weight: 800 !important;
+}
+
+round-progress {
+    margin: auto;
+  }
+
+  .text {
+    position: absolute;
+    color: #9B9B9B;
+    font-weight: 100;
+    line-height: 1;
+    font-size: 40px !important;
+    top: 45%;
+    bottom: auto;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    font-size: 26px;
+  }

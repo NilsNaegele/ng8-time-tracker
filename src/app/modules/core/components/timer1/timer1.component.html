@@ -1,0 +1,42 @@
+<mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Count Down Timer</mat-card-title>
+          <mat-card-subtitle>Watch my Win</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content style="justify-content: center">
+            <div class="text" *ngIf="!isFinished">
+                {{ retainMinutes | number:'2.0-0' }} : {{ retainSeconds | number:'2.0-0' }}
+            </div>
+            <div class="text" *ngIf="isFinished">
+                    grow!
+            </div>
+            <round-progress
+            [max]="maxSeconds"
+            [current]="currentSeconds"
+            [radius]="100"
+            [stroke]="25">
+            </round-progress>
+        </mat-card-content>
+        <mat-card-actions>
+            <label>Minutes</label>
+            <div>
+                <div>
+                        <button *ngFor="let minutes of predefinedMinutes" 
+                        (click)="maxMinutes = minutes" mat-raised-button>
+                        {{ minutes }}
+                        </button>
+                </div>
+                <input matInput
+                    placeholder="number of minutes" 
+                    type="text"
+                    [(ngModel)]="maxMinutes"
+                    (keydown)="reset()">
+                <button *ngIf="currentVal <= 0" (click)="start()" color="primary" mat-raised-button>
+                    Start
+                </button>
+                <button *ngIf="!isFinished" (click)="finish()" color="primary" mat-raised-button>
+                    Finish
+                </button>
+            </div> 
+        </mat-card-actions>
+      </mat-card>
