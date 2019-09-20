@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 import { HomeComponent } from './components/home/home.component';
+import { TimeboxSelectorComponent } from './components/time-box/timebox-selector/timebox-selector.component';
 
 const coreRoutes: Routes = [
   {
@@ -13,6 +14,10 @@ const coreRoutes: Routes = [
   {
     path: 'pomodoro',
     component: PomodoroComponent
+  },
+  {
+    path: 'time-box',
+    component: TimeboxSelectorComponent
   }
 ];
 

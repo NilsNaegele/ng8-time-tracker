@@ -9,10 +9,11 @@ import { TimerComponent } from './components/timer/timer.component';
 import { Timer1Component } from './components/timer1/timer1.component';
 import { PomodoroComponent } from './components/pomodoro/pomodoro.component';
 import { MinuteSecondsPipe } from './pipes/minute-seconds.pipe';
+import { TimeboxSelectorComponent } from './components/time-box/timebox-selector/timebox-selector.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, TimerComponent, Timer1Component, PomodoroComponent, MinuteSecondsPipe],
+  declarations: [HomeComponent, TimerComponent, Timer1Component, PomodoroComponent, MinuteSecondsPipe, TimeboxSelectorComponent],
   imports: [
     SharedModule,
     RoundProgressModule,

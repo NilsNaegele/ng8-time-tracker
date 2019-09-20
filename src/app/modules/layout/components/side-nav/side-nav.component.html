@@ -5,10 +5,10 @@
       <mat-icon class="example-icon">build</mat-icon>
     </mat-toolbar-row>
     <mat-toolbar-row>
-      <button mat-button (click)="navigatePomodoro()" class="app-sidebar-button">Pomodoro</button>
+      <button mat-button (click)="navigateTo('/pomodoro')" class="app-sidebar-button">Pomodoro</button>
     </mat-toolbar-row>
     <mat-toolbar-row>
-        <button mat-button class="app-sidebar-button">Time 1</button>
+        <button mat-button (click)="navigateTo('/time-box')" class="app-sidebar-button">Timebox</button>
     </mat-toolbar-row>
     <mat-toolbar-row>
         <button mat-button class="app-sidebar-button">Time 2</button>

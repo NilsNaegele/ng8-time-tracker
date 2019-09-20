@@ -49,7 +49,7 @@ export class PomodoroComponent implements OnInit {
   }
 
   notify() {
-    let options = {
+    const options = {
       body: `Your ${this.currentStateName} has ended.`,
       icon: '../../../../../assets/icons-256.png'
     };
