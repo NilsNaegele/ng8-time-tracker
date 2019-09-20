@@ -5,6 +5,9 @@
       <mat-icon class="example-icon">build</mat-icon>
     </mat-toolbar-row>
     <mat-toolbar-row>
+      <button mat-button (click)="navigateTo('/timers-display')" class="app-sidebar-button">Timers</button>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
       <button mat-button (click)="navigateTo('/pomodoro')" class="app-sidebar-button">Pomodoro</button>
     </mat-toolbar-row>
     <mat-toolbar-row>
@@ -61,12 +64,6 @@
       <button mat-raised-button color="accent" class="app-sidebar-button">
         <mat-icon class="example-icon">help</mat-icon>
         Time 10
-      </button>
-    </mat-toolbar-row>
-    <mat-toolbar-row>
-    <button mat-raised-button color="accent" class="app-sidebar-button">
-        <mat-icon class="example-icon">help</mat-icon>
-        Time 11
       </button>
     </mat-toolbar-row>
 

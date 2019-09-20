@@ -1,3 +1,82 @@
 .container {
     text-align: center;
 }
+
+.hero {
+    min-height: 600px;
+    // margin-top: 95px;
+    background-color: #14162f;
+    min-height: calc(100vh - 92px);
+    padding-bottom: 30px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+.hero__responsive-image {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    left: 0;
+    top: 0;
+    // background-color: #14162f;
+}
+
+.hero-video {
+    // z-index: 1;
+    position: relative;
+}
+
+.hero-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-1%);
+    width: 100%;
+}
+
+.top_padded {
+    position: absolute;
+    top: 435px;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.hero__heading {
+    -webkit-animation: fade-from-bottom 1.3s;
+    -o-animation: fade-from-bottom 1.3s;
+    animation: fade-from-bottom 1.3s;
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px #323232;
+    color: #fff;
+}
+
+.hero__subheading {
+    -webkit-animation: fade-from-bottom 1.3s;
+    -o-animation: fade-from-bottom 1.3s;
+    animation: fade-from-bottom 1.3s;
+    display: block;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1em;
+    margin-bottom: .3em;
+    margin-top: 0;
+    text-shadow: 1px 1px 3px #323232;
+    color: #fff;
+}
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+@media screen and (min-width: 1024px) {
+
+.hero-video video {
+    transform: translate(-50%,-12%);
+    width: 65%;
+}
+}
