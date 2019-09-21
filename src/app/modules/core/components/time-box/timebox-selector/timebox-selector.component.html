@@ -1,1 +1,22 @@
-<p>timebox-selector works!</p>
+<mat-card class="example-card">
+	<mat-card-header>
+			<mat-card-title>Time Box</mat-card-title>
+	</mat-card-header>
+        <div class="example-button-row">
+		<button 
+                mat-raised-button color="primary"
+				*ngFor="let timebox of timeboxes" 
+				[routerLink]="['/running-timebox', timebox.asSeconds()]" 
+				[class.active]="timebox === selectedTimebox"
+		>
+			{{ timebox.getHumanReadableText() }}
+        </button>
+        </div>
+		<button mat-stroked-button color="accent">
+			Custom
+		</button>
+		<button mat-stroked-button color="warn" routerLink="/" >
+			<span>&times;</span> None
+		</button>
+</mat-card>
+<router-outlet></router-outlet>

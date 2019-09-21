@@ -1,0 +1,27 @@
+<mat-card class="example-card" *ngIf="timebox">
+
+    <div>
+        <h3>Timebox: {{ timebox.getHumanReadableText() }}
+        <br>
+        <small>
+            Remaining: {{ remainingDuration.getHumanReadableText() }}
+        </small>
+    </h3>
+
+
+    <div class="progress" [class.expired-timebox]="remainingInPercentsValue <= 0">
+        <div class="progress-bar"
+              [style.height.px]="heightValue"
+              [style.background-color]="remainingColor"
+              [style.width]="remainingInPercents">
+        </div>
+        <h2 class="centered" *ngIf="remainingInPercentsValue <= 0">
+                Timebox expired!
+        </h2>
+    </div>
+    </div>
+
+
+
+
+</mat-card>

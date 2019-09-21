@@ -14,7 +14,7 @@ export class TimerComponent implements OnChanges, OnDestroy {
   seconds: any = '00';
   milliseconds: any = '00';
 
-  laps: any = [];
+  iterations: any = [];
   counter: number;
   timerRef;
   running = false;
@@ -64,9 +64,9 @@ export class TimerComponent implements OnChanges, OnDestroy {
     }
   }
 
-  lapTimeSplit() {
+  iterationTimeSplit() {
     const lapTime = this.minutes + ':' + this.seconds + ':' + this.milliseconds;
-    this.laps.push(lapTime);
+    this.iterations.push(lapTime);
   }
 
   clearTimer() {
@@ -76,7 +76,7 @@ export class TimerComponent implements OnChanges, OnDestroy {
     this.milliseconds = '00';
     this.seconds = '00';
     this.minutes = '00';
-    this.laps = [];
+    this.iterations = [];
     clearInterval(this.timerRef);
   }
 

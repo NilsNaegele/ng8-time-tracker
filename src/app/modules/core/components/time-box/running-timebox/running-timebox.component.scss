@@ -1,0 +1,37 @@
+.example-card {
+  max-width: 450px;
+margin-top: 1%;
+margin-bottom: 5%;
+text-align: center;
+}
+
+.progress {
+  height: 200px;
+  width: 200px;
+	position: relative;
+	background-color: #f8f9fa;
+}
+.progress-bar {
+	position: absolute;
+	bottom: 0px;
+}
+/* red blinking */
+.expired-timebox {
+  animation: expired-animation 2s steps(40, start) 20;
+  -webkit-animation: expired-animation 2s steps(40, start) 20;
+}
+@keyframes expired-animation {
+  to {
+    background-color: green;
+	  color: white;
+  }
+}
+@-webkit-keyframes expired-animation {
+  to {
+    background-color: green;
+	  color: white;
+  }
+}
+.centered {
+	margin: auto;
+}

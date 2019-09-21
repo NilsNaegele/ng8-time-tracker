@@ -18,15 +18,15 @@
                 {{ startText }}
             </button>
             <button  mat-button [disabled]="!counter" [ngClass]="{'disabled': !counter}"
-            (click)="lapTimeSplit()">
-                Lap
+            (click)="iterationTimeSplit()">
+                Iteration
             </button>
             <button mat-button (click)="clearTimer()">
                 Clear
             </button>
             <br>
-            <div *ngFor="let lap of laps; let i = index">
-                <div> &#9873; <b>Lap {{ i + 1 }}</b>  {{ lap }}</div>
+            <div *ngFor="let iteration of iterations; let i = index">
+                <div> &#9873; <b>Iteration {{ i + 1 }}</b>  {{ iteration }}</div>
             </div>
         </div> 
     </mat-card-actions>

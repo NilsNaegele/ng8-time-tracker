@@ -11,6 +11,7 @@ import { PomodoroComponent } from './components/pomodoro/pomodoro.component';
 import { MinuteSecondsPipe } from './pipes/minute-seconds.pipe';
 import { TimeboxSelectorComponent } from './components/time-box/timebox-selector/timebox-selector.component';
 import { TimersDisplayComponent } from './components/timers-display/timers-display.component';
+import { RunningTimeboxComponent } from './components/time-box/running-timebox/running-timebox.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TimersDisplayComponent } from './components/timers-display/timers-displ
     PomodoroComponent,
     MinuteSecondsPipe,
     TimeboxSelectorComponent,
-    TimersDisplayComponent],
+    TimersDisplayComponent,
+    RunningTimeboxComponent],
   imports: [
     SharedModule,
     RoundProgressModule,
