@@ -12,6 +12,11 @@ import { MinuteSecondsPipe } from './pipes/minute-seconds.pipe';
 import { TimeboxSelectorComponent } from './components/time-box/timebox-selector/timebox-selector.component';
 import { TimersDisplayComponent } from './components/timers-display/timers-display.component';
 import { RunningTimeboxComponent } from './components/time-box/running-timebox/running-timebox.component';
+import { SauceTimerComponent } from './components/sauce-timer/sauce-timer/sauce-timer.component';
+import { AboutSauceTimerComponent } from './components/sauce-timer/about-sauce-timer/about-sauce-timer.component';
+import { CamelizePipe } from './components/sauce-timer/pipes/camelize.pipe';
+import { CapitalizePipe } from './components/sauce-timer/pipes/capitalize.pipe';
+import { DashToSpacePipe } from './components/sauce-timer/pipes/dash-to-space.pipe';
 
 
 @NgModule({
@@ -23,7 +28,12 @@ import { RunningTimeboxComponent } from './components/time-box/running-timebox/r
     MinuteSecondsPipe,
     TimeboxSelectorComponent,
     TimersDisplayComponent,
-    RunningTimeboxComponent],
+    RunningTimeboxComponent,
+    SauceTimerComponent,
+    AboutSauceTimerComponent,
+    CamelizePipe,
+    CapitalizePipe,
+    DashToSpacePipe],
   imports: [
     SharedModule,
     RoundProgressModule,
