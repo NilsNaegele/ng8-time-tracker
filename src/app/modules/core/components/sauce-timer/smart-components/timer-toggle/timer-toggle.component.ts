@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TimerService } from '../../services/timer.service';
+import { SettingsService } from '../../services/settings.service';
 
 @Component({
   selector: 'app-timer-toggle',
@@ -7,7 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimerToggleComponent implements OnInit {
 
-  constructor() { }
+  types: string[] [];
+
+  constructor(private timerService: TimerService,
+              public settingsService: SettingsService) { }
+
+  isTimerType(type: string): boolean {
+      return this.timerService.getType() === type;
+  }
+
+  setTimer(type: string): void {
+    this.timerService.setType(type);
+  }
+
 
   ngOnInit() {
   }

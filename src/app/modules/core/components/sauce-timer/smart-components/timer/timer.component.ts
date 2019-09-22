@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TimerService } from '../../services/timer.service';
 
 @Component({
   selector: 'app-sauce-timer-smart',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SauceTimerSmartComponent implements OnInit {
 
-  constructor() { }
+  constructor(public timerService: TimerService) { }
 
   ngOnInit() {
   }

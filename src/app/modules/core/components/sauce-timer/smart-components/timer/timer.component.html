@@ -1,1 +1,13 @@
-<p>timer works!</p>
+<div class="timer">
+        <div class="timer-countdown">
+            <h1>
+                <time>{{ timerService.getCurrentTime() | async }}</time>
+            </h1>
+        </div>
+        <div class="timer-progress">
+            <progress [value]="timerService.getCurrentTimePercentage() | async"
+            max=100></progress>
+            <span class="timer-progress-marker" [style.width.px]="((timerService.getCurrentTimePercentage() | async) / 100) * 580">
+            </span>
+        </div>
+    </div>
