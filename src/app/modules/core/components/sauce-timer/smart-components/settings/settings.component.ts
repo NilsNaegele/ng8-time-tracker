@@ -1,15 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { CamelizePipe } from '../../pipes/camelize.pipe';
+import { TimerService } from '../../services/timer.service';
+import { SettingsService } from '../../services/settings.service';
 
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
   styleUrls: ['./settings.component.scss']
 })
-export class SettingsComponent implements OnInit {
+export class SettingsComponent {
 
-  constructor() { }
+  constructor(private titleService: Title,
+              private camelizePipe: CamelizePipe,
+              private timerService: TimerService,
+              public settingsService: SettingsService) { }
 
-  ngOnInit() {
+  refreshTimer() {
+    this.timerService.restartTimer();
+  }
+
+  resetSettings() {
+    this.settingsService.resetSettings();
+    this.refreshTimer();
+  }
+
+  previewAlarm(): void {
+    this.settingsService.playAlarm();
+  }
+
+  saveSettings(): void {
+    this.settingsService.saveSettings();
   }
 
 }

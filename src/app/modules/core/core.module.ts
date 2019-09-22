@@ -2,7 +2,6 @@ import { TimerToggleComponent } from './components/sauce-timer/smart-components/
 import { AppTimerComponent } from './components/sauce-timer/dumb-components/app-timer/app-timer.component';
 import { ActionButtonsComponent } from './components/sauce-timer/smart-components/action-buttons/action-buttons.component';
 import { NgModule } from '@angular/core';
-
 import {RoundProgressModule} from 'angular-svg-round-progressbar';
 
 import { CoreRoutingModule } from './core-routing.module';
@@ -24,6 +23,7 @@ import { SettingsComponent } from './components/sauce-timer/smart-components/set
 import { SidebarComponent } from './components/sauce-timer/smart-components/sidebar/sidebar.component';
 import { SauceTimerSmartComponent } from './components/sauce-timer/smart-components/timer/timer.component';
 import { HistoryComponent } from './components/sauce-timer/smart-components/history/history.component';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -54,6 +54,13 @@ import { HistoryComponent } from './components/sauce-timer/smart-components/hist
     SharedModule,
     RoundProgressModule,
     CoreRoutingModule
-  ]
+  ],
+  providers: [
+    DatePipe,
+    CamelizePipe,
+    DashToSpacePipe,
+    CapitalizePipe,
+    { provide: 'windowObject', useValue: window}
+   ]
 })
 export class CoreModule { }

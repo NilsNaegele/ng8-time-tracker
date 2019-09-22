@@ -18,7 +18,7 @@ export class TimerService {
   private time: Timer;
 
   constructor(
-    @Inject('Window') private window: Window,
+    @Inject('windowObject') private window: Window,
     private datePipe: DatePipe,
     private camelizePipe: CamelizePipe,
     private dashToSpacePipe: DashToSpacePipe,
@@ -141,7 +141,7 @@ export class TimerService {
 
       const timer = () => {
         if (this.worker && this.time.running.getValue()) {
-          this.worker.postMessage({ start, duration: this.time.duration, 'granularity': this.time.granularity});
+          this.worker.postMessage({ start, duration: this.time.duration, granularity: this.time.granularity});
           console.log('message posted to worker');
           this.worker.addEventListener('message', (e: MessageEvent) => {
             console.log('message received from worker', e.data);
