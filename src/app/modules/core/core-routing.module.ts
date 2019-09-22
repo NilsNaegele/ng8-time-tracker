@@ -1,4 +1,4 @@
-import { AboutSauceTimerComponent } from './components/sauce-timer/about-sauce-timer/about-sauce-timer.component';
+import { AboutSauceTimerComponent } from './components/sauce-timer/dumb-components/about-sauce-timer/about-sauce-timer.component';
 import { PomodoroComponent } from './components/pomodoro/pomodoro.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,7 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { TimeboxSelectorComponent } from './components/time-box/timebox-selector/timebox-selector.component';
 import { TimersDisplayComponent } from './components/timers-display/timers-display.component';
 import { RunningTimeboxComponent } from './components/time-box/running-timebox/running-timebox.component';
-import { SauceTimerComponent } from './components/sauce-timer/sauce-timer/sauce-timer.component';
+import { SauceTimerComponent } from './components/sauce-timer/dumb-components/sauce-timer/sauce-timer.component';
 
 const coreRoutes: Routes = [
   {

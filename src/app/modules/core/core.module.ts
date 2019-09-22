@@ -1,3 +1,6 @@
+import { TimerToggleComponent } from './components/sauce-timer/smart-components/timer-toggle/timer-toggle.component';
+import { AppTimerComponent } from './components/sauce-timer/dumb-components/app-timer/app-timer.component';
+import { ActionButtonsComponent } from './components/sauce-timer/smart-components/action-buttons/action-buttons.component';
 import { NgModule } from '@angular/core';
 
 import {RoundProgressModule} from 'angular-svg-round-progressbar';
@@ -12,11 +15,15 @@ import { MinuteSecondsPipe } from './pipes/minute-seconds.pipe';
 import { TimeboxSelectorComponent } from './components/time-box/timebox-selector/timebox-selector.component';
 import { TimersDisplayComponent } from './components/timers-display/timers-display.component';
 import { RunningTimeboxComponent } from './components/time-box/running-timebox/running-timebox.component';
-import { SauceTimerComponent } from './components/sauce-timer/sauce-timer/sauce-timer.component';
-import { AboutSauceTimerComponent } from './components/sauce-timer/about-sauce-timer/about-sauce-timer.component';
+import { AboutSauceTimerComponent } from './components/sauce-timer/dumb-components/about-sauce-timer/about-sauce-timer.component';
 import { CamelizePipe } from './components/sauce-timer/pipes/camelize.pipe';
 import { CapitalizePipe } from './components/sauce-timer/pipes/capitalize.pipe';
 import { DashToSpacePipe } from './components/sauce-timer/pipes/dash-to-space.pipe';
+import { SauceTimerComponent } from './components/sauce-timer/dumb-components/sauce-timer/sauce-timer.component';
+import { SettingsComponent } from './components/sauce-timer/smart-components/settings/settings.component';
+import { SidebarComponent } from './components/sauce-timer/smart-components/sidebar/sidebar.component';
+import { SauceTimerSmartComponent } from './components/sauce-timer/smart-components/timer/timer.component';
+import { HistoryComponent } from './components/sauce-timer/smart-components/history/history.component';
 
 
 @NgModule({
@@ -33,7 +40,16 @@ import { DashToSpacePipe } from './components/sauce-timer/pipes/dash-to-space.pi
     AboutSauceTimerComponent,
     CamelizePipe,
     CapitalizePipe,
-    DashToSpacePipe],
+    DashToSpacePipe,
+    ActionButtonsComponent,
+    AppTimerComponent,
+    SettingsComponent,
+    TimerToggleComponent,
+    SidebarComponent,
+    TimerComponent,
+    SauceTimerSmartComponent,
+    HistoryComponent
+  ],
   imports: [
     SharedModule,
     RoundProgressModule,

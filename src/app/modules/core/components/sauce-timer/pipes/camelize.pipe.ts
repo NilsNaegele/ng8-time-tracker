@@ -5,8 +5,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CamelizePipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
+  transform(input: any): string {
+    return input.replace(/(?:^\w|[A-Z]|\b\w)/g, (letter, index) => {
+      return index === 0 ? letter.toLowerCase() : letter.toUpperCase();
+    }).replace(/-/g, '');
   }
 
 }
