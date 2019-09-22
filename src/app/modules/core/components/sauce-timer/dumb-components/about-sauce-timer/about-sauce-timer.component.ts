@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-sauce-timer.component.scss']
 })
 export class AboutSauceTimerComponent implements OnInit {
+  public currentYear: number;
 
   constructor() { }
 
   ngOnInit() {
+    const date = new Date();
+    this.currentYear = date.getFullYear();
   }
 
 }

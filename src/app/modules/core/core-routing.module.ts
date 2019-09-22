@@ -1,3 +1,4 @@
+import { AppTimerComponent } from './components/sauce-timer/dumb-components/app-timer/app-timer.component';
 import { AboutSauceTimerComponent } from './components/sauce-timer/dumb-components/about-sauce-timer/about-sauce-timer.component';
 import { PomodoroComponent } from './components/pomodoro/pomodoro.component';
 import { NgModule } from '@angular/core';
@@ -33,7 +34,7 @@ const coreRoutes: Routes = [
   },
   {
     path: 'sauce-timer',
-    component: SauceTimerComponent
+    component: AppTimerComponent
   },
   {
     path: 'about-sauce-timer',

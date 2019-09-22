@@ -12,7 +12,7 @@ import { SettingsService } from '../../services/settings.service';
 export class SettingsComponent {
 
   constructor(private titleService: Title,
-              private camelizePipe: CamelizePipe,
+              public camelizePipe: CamelizePipe,
               private timerService: TimerService,
               public settingsService: SettingsService) { }
 

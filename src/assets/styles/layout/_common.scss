@@ -25,18 +25,18 @@
 //   }
 // }
 
-// .container {
-//   display: flex;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   width: em-calc(940px);
-//   height: em-calc(656px);
-//   background: #FFFFFF;
-//   box-shadow: 0 10px 40px 0 rgba(0,0,0,0.20);
-//   border-radius: 10px;
-//   transform: translate(-50%, -50%);
-// }
+.sauce-container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: em-calc(940px);
+  height: em-calc(656px);
+  background: #FFFFFF;
+  box-shadow: 0 10px 40px 0 rgba(0,0,0,0.20);
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+}
 
 .about-view,
 .timer-view {

@@ -1,1 +1,15 @@
-
+<div class="sauce-container">
+    <section class="section-master">
+        <a *ngIf="showTimer()"
+        routerLink="/about-sauce-timer"
+        routerLinkActive="active"
+        class="help-icon about">About</a>
+        <a *ngIf="!showTimer()"
+        routerLink="/sauce-timer"
+        routerLinkActive="active"
+        class="help-icon timer">Timer</a>
+        <app-sauce-timer></app-sauce-timer>
+        <!-- <router-outlet></router-outlet> -->
+    </section>
+    <app-sidebar></app-sidebar>
+</div>

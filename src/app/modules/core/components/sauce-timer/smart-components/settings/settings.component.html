@@ -10,7 +10,8 @@
                     <div class="input-container">
                         <input type="text" placeholder="{{ settingsService.currentSettings[this.camelizePipe.transform(type) + 'Timer'] }}"
                         name="{{ type }}Input" id="{{ type }}-input"
-                        [(ngModel)="refreshTimer($event); saveSettings();"]>min
+                        [(ngModel)]="settingsService.currentSettings[ this.camelizePipe.transform(type) + 'Timer']"
+                        (ngModelChange)="refreshTimer(); saveSettings()" /> min
                     </div>
                 </li>
             </ul>
