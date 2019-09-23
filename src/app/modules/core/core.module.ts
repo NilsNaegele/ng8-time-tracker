@@ -25,6 +25,11 @@ import { SauceTimerSmartComponent } from './components/sauce-timer/smart-compone
 import { HistoryComponent } from './components/sauce-timer/smart-components/history/history.component';
 import { DatePipe } from '@angular/common';
 import { Timer2Component } from './components/timer2/timer2.component';
+import { DeadlineBoxComponent } from './components/deadline-box/deadline-box.component';
+import { CountdownComponent } from './components/deadline-box/countdown/countdown.component';
+import { EventsComponent } from './components/deadline-box/events/events.component';
+import { HallOfFameEntryComponent } from './components/deadline-box/hall-of-fame-entry/hall-of-fame-entry.component';
+import { HallOfFameComponent } from './components/deadline-box/hall-of-fame/hall-of-fame.component';
 
 
 @NgModule({
@@ -50,7 +55,12 @@ import { Timer2Component } from './components/timer2/timer2.component';
     TimerComponent,
     SauceTimerSmartComponent,
     HistoryComponent,
-    Timer2Component
+    Timer2Component,
+    DeadlineBoxComponent,
+    CountdownComponent,
+    EventsComponent,
+    HallOfFameEntryComponent,
+    HallOfFameComponent
   ],
   imports: [
     SharedModule,

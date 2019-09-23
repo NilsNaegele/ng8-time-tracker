@@ -1,3 +1,4 @@
+import { DeadlineBoxComponent } from './components/deadline-box/deadline-box.component';
 import { Timer2Component } from './components/timer2/timer2.component';
 import { AppTimerComponent } from './components/sauce-timer/dumb-components/app-timer/app-timer.component';
 import { AboutSauceTimerComponent } from './components/sauce-timer/dumb-components/about-sauce-timer/about-sauce-timer.component';
@@ -40,6 +41,10 @@ const coreRoutes: Routes = [
   {
     path: 'simple-timer',
     component: Timer2Component
+  },
+  {
+    path: 'deadline-box',
+    component: DeadlineBoxComponent
   },
   {
     path: 'about-sauce-timer',
