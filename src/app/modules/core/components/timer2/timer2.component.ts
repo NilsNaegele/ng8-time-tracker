@@ -103,25 +103,8 @@ export class Timer2Component implements OnInit {
   }
 
   waitTimer() {
-    if (this.preTime === 0) {
-      this.preTime = this.bgTicks;
-      return;
-    } else {
-      if (this.curTime === 0) {
-        this.curTime = this.bgTicks;
-      } else {
-        this.preTime = this.curTime;
-        this.curTime = this.bgTicks;
-      }
-    }
-    if (this.curTime - this.preTime < this.configConstantsService.CLICK_TIME) {
-      this.stopTimer();
-      this.resumeTimer();
-    }
+    this.stopTimer();
   }
-
-
-
 
   private getSeconds(ticks: number) {
     return this.pad(ticks % this.configConstantsService.DEFAULT_MINISEC_TIME);
