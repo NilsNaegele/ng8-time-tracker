@@ -1,3 +1,4 @@
+import { Timer2Component } from './components/timer2/timer2.component';
 import { AppTimerComponent } from './components/sauce-timer/dumb-components/app-timer/app-timer.component';
 import { AboutSauceTimerComponent } from './components/sauce-timer/dumb-components/about-sauce-timer/about-sauce-timer.component';
 import { PomodoroComponent } from './components/pomodoro/pomodoro.component';
@@ -35,6 +36,10 @@ const coreRoutes: Routes = [
   {
     path: 'sauce-timer',
     component: AppTimerComponent
+  },
+  {
+    path: 'simple-timer',
+    component: Timer2Component
   },
   {
     path: 'about-sauce-timer',

@@ -24,6 +24,7 @@ import { SidebarComponent } from './components/sauce-timer/smart-components/side
 import { SauceTimerSmartComponent } from './components/sauce-timer/smart-components/timer/timer.component';
 import { HistoryComponent } from './components/sauce-timer/smart-components/history/history.component';
 import { DatePipe } from '@angular/common';
+import { Timer2Component } from './components/timer2/timer2.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { DatePipe } from '@angular/common';
     SidebarComponent,
     TimerComponent,
     SauceTimerSmartComponent,
-    HistoryComponent
+    HistoryComponent,
+    Timer2Component
   ],
   imports: [
     SharedModule,

@@ -1,0 +1,22 @@
+<mat-card class="example-card">
+    <h1>
+        {{ hoursDisplay ? hoursDisplay : '00'}} : 
+        {{ (minutesDisplay) && (minutesDisplay <= 59) ? minutesDisplay : '00'}} : 
+        {{(secondsDisplay) && (secondsDisplay <= 59) ? secondsDisplay : '00'}}
+        <br>
+    </h1>
+    <div class="timer-control">
+        <button class="time-button" [disabled]="!STARTBTN" (click)="startTimer()">
+            {{ startBtn }}
+        </button>
+        <button class="time-button" [disabled]="!STOPBTN" (click)="stopTimer()">
+                {{ stopBtn }}
+        </button>
+        <button class="time-button" [disabled]="!RESETBTN" (click)="resetTimer()">
+                {{ resetBtn }}
+        </button>
+        <button class="time-button" [disabled]="!WAITBTN" (click)="waitTimer()">
+                {{ waitBtn }}
+        </button>
+    </div>
+</mat-card>
