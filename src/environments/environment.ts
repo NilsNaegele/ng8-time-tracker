@@ -12,6 +12,10 @@ export const environment = {
     storageBucket: 'ng8-time-tracker.appspot.com',
     messagingSenderId: '409019022748',
     appId: '1:409019022748:web:6df4475bc56b833fd8dc59'
+   },
+   uuid: {
+     domain: 'ng8-time-tracker.firebaseapp.com/',
+     namespace: '8e884ace-bee4-11e4-8dfc-aa07a5b093db'
    }
 };
 

@@ -6,8 +6,8 @@ import { UpdatePayload } from '../models/history.model';
 
 export interface HistoryEntity {
   id: string;
-  game: string;
-  platform: string;
+  details: string;
+  activity: string;
   startTime: number;
   endTime: number;
 }
@@ -20,6 +20,14 @@ export const adapter: EntityAdapter<HistoryEntity> = createEntityAdapter<History
 const initialState: State = adapter.getInitialState({
   loading: false
 });
+
+const getUpdatedState = (payload: UpdatePayload, currentState: State): State => {
+  const { itemId: id, ...changes } = payload;
+  return adapter.updateOne({
+    id,
+    changes
+  }, currentState);
+};
 
 export function reducer(state: State = initialState, action: actions.All): State {
   switch (action.type) {
@@ -42,10 +50,10 @@ export function reducer(state: State = initialState, action: actions.All): State
     case actions.REMOVE_HISTORY_ITEM_SUCCEEDED: {
       return adapter.removeOne(action.itemId, state);
     }
-    case actions.UPDATE_GAME_SUCCEEDED: {
+    case actions.UPDATE_DETAILS_SUCCEEDED: {
       return getUpdatedState(action.payload, state);
     }
-    case actions.UPDATE_PLATFORM_SUCCEEDED: {
+    case actions.UPDATE_ACTIVITY_SUCCEEDED: {
       return getUpdatedState(action.payload, state);
     }
     case actions.UPDATE_ELAPSED_TIME_SUCCEEDED: {
@@ -57,10 +65,4 @@ export function reducer(state: State = initialState, action: actions.All): State
   }
 }
 
-const getUpdatedState = (payload: UpdatePayload, currentState: State): State => {
-  const { itemId: id, ...changes } = payload;
-  return adapter.updateOne({
-    id,
-    changes
-  }, currentState);
-};
+

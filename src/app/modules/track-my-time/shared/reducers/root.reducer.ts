@@ -15,7 +15,7 @@ import { getHistoryGroupingList, getHistoryListItemsMap } from '../utils/history
 
 export interface SharedState {
   history: fromHistory.State;
-  platforms: fromActivities.State;
+  activities: fromActivities.State;
   progress: fromProgress.State;
   timer: fromTimer.State;
 }
@@ -26,14 +26,14 @@ export interface State {
 
 export const reducers: ActionReducerMap<SharedState, any> = {
   history: fromHistory.reducer,
-  platforms: fromActivities.reducer,
+  activities: fromActivities.reducer,
   progress: fromProgress.reducer,
   timer: fromTimer.reducer
 };
 
 export const selectSharedState = createFeatureSelector<SharedState>('shared');
 export const selectHistory = createSelector(selectSharedState, state => state.history);
-export const selectActivities = createSelector(selectSharedState, state => state.platforms);
+export const selectActivities = createSelector(selectSharedState, state => state.activities);
 export const selectProgress = createSelector(selectSharedState, state => state.progress);
 export const selectTimer = createSelector(selectSharedState, state => state.timer);
 
@@ -48,7 +48,7 @@ export const selectCompletedProgress = createSelector(selectAllProgress,
 export const { selectAll: selectAllHistory } = fromHistory.adapter.getSelectors(selectHistory);
 export const selectHistoryItems = createSelector(selectAllHistory, selectAllProgress,
   (historyEntries, progress) => historyEntries.map(
-    historyEntry => <HistoryListItem>{
+    historyEntry => <HistoryListItem> {
       ...historyEntry,
       dateRange: [
         new Date(historyEntry.startTime),
@@ -70,7 +70,7 @@ export const selectHistoryGroupingsByGame = createSelector(selectSortedHistoryIt
   return getHistoryGroupingList(historyListItemsMap);
 });
 export const selectHistoryLoading = createSelector(selectHistory, history => history.loading);
-export const selectTrackedDetails = createSelector(selectSortedHistoryItems, items => getUniqueFrom(items, item => item.game));
+export const selectTrackedDetails = createSelector(selectSortedHistoryItems, items => getUniqueFrom(items, item => item.details));
 
 export const selectActivitiesOptions = createSelector(selectActivities, platforms => platforms.options);
 export const selectActivitiesLoaded = createSelector(selectActivitiesOptions, platformOptions => platformOptions.length !== 0);

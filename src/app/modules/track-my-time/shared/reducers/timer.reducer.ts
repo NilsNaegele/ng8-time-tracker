@@ -2,13 +2,13 @@ import * as actions from '../actions/timer.actions';
 
 export interface State {
   details: string;
-  activities: string;
+  activity: string;
   startTime: number;
 }
 
 const initialState: State = {
   details: '',
-  activities: '',
+  activity: '',
   startTime: 0
 };
 
@@ -26,7 +26,7 @@ export function reducer(state: State = initialState, action: actions.All): State
     case actions.SET_ACTIVITY: {
       return {
         ...state,
-        activities: action.activity
+        activity: action.activity
       };
     }
     case actions.SET_START_TIME: {

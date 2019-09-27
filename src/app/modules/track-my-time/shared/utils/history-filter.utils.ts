@@ -9,7 +9,7 @@ export const getUniqueFrom = (items: HistoryListItem[], keyFunction: HistoryList
 
 export const filterPlatforms = (groupings: HistoryGrouping[], game: string | null): string[] => {
   const selectedDetailsGrouping = groupings.find(grouping => grouping.key === game);
-  return selectedDetailsGrouping ? getUniqueFrom(selectedDetailsGrouping.historyItems, item => item.platform) : [];
+  return selectedDetailsGrouping ? getUniqueFrom(selectedDetailsGrouping.historyItems, item => item.activity) : [];
 };
 
 export const filterStartTimes = (groupings: HistoryGrouping[], details: string | null, activity: string): number[] => {
@@ -29,4 +29,3 @@ export const filterHistoryItemsBetween =
     const filtered = filterHistoryItemsAfter(grouping, startEntry);
     return filtered.filter(item => item.endTime <= endEntry.endTime);
   };
-  
