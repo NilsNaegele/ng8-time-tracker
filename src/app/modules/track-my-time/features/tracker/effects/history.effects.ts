@@ -11,7 +11,9 @@ import * as appActions from '../../../actions/app.actions';
 import * as historyActions from '../../../shared/actions/history.actions';
 import * as timerActions from '../../../shared/actions/timer.actions';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class HistoryEffects {
 
   constructor(private actions$: Actions, private historyService: HistoryService) { }

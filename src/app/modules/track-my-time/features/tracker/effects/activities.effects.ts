@@ -10,7 +10,9 @@ import { ActivitiesService } from '../services/activities.service';
 import * as appActions from '../../../actions/app.actions';
 import * as activitiesActions from '../../../shared/actions/activities.actions';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ActivitiesEffects {
 
   constructor(private actions$: Actions, private activitiesService: ActivitiesService) { }

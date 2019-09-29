@@ -11,7 +11,9 @@ import { TimerService } from '../services/timer.service';
 import * as appActions from '../../../actions/app.actions';
 import * as timerActions from '../../../shared/actions/timer.actions';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class TimerEffects {
 
   constructor(private actions$: Actions, private historyService: HistoryService, private timerService: TimerService) { }

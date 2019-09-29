@@ -16,7 +16,6 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-@Injectable()
 export class ElapsedTimeService {
 
   currentTime$: Observable<number>;

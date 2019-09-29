@@ -5,7 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const trackerRoutes: Routes = [
-    { path: 'my-super-tracker',  component: TrackerComponent }
+    // { path: 'my-super-tracker', redirectTo: '/my-tracker' },
+    { path: 'my-tracker',  component: TrackerComponent }
 //   {
 //     path: 'track-my-time',
 //     component: TrackerComponent
