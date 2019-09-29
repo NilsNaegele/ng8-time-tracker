@@ -28,6 +28,7 @@ export class TrackerComponent implements OnInit {
   activitiesOptions$: Observable<string[]>;
   details$: Observable<string | NgSelectValue | null>;
   elapsedTime$: Observable<string>;
+  trackerNavCaption$: Observable<string>;
 
   historyGroupings$: Observable<HistoryGrouping[]>;
   showLoadMoreButton$: Observable<boolean>;
@@ -54,5 +55,6 @@ export class TrackerComponent implements OnInit {
     // this.activitiesOptions$ = this.sharedStore.select(sharedSelectors.activitiesOptions);
     this.activitiesOptions$ = this.activitiesService.getActivitiesOptions();
     // console.log(this.activitiesOptions$);
+    this.trackerNavCaption$ = this.elapsedTimeService.getElapsedTime('Tracker');
   }
 }
