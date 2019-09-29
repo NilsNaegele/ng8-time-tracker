@@ -5,14 +5,15 @@
                        [trackedDetails]="trackedDetails$ | async"
                        [details]="details$ | async">
     </app-tracker-timer>
+    <br>
   
-    <!-- <app-tracker-history [groups]="historyGroupings$ | async"
+   <app-tracker-history [groups]="historyGroupings$ | async"
                          [activitiesOptions]="activitiesOptions$ | async"
                          [trackedDetails]="trackedDetails$ | async">
     </app-tracker-history>
   
-    <div *ngIf="this.showLoadMoreButton$ | async"
+     <div *ngIf="this.showLoadMoreButton$ | async"
          class="load-more-button">
       <app-tracker-load-more></app-tracker-load-more>
-    </div> -->
+    </div>
   </div>

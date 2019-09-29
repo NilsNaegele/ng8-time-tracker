@@ -1,0 +1,21 @@
+$background-dark-accent: #8d69c6;
+$text-light: #e9f1f7;
+
+.load-more {
+    margin-bottom: 20px;
+  
+    button {
+      display: flex;
+      align-items: center;
+      justify-self: center;
+      font-size: 1.1em;
+      background: $background-dark-accent;
+      color: $text-light;
+      padding: 10px;
+      border: none;
+  
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
