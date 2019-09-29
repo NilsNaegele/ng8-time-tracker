@@ -50,6 +50,7 @@ const coreRoutes: Routes = [
     path: 'about-sauce-timer',
     component: AboutSauceTimerComponent
   },
+  { path: 'my-tracker', redirectTo: '/my-super-tracker' },
   {
     path: '**',
     redirectTo: '/'

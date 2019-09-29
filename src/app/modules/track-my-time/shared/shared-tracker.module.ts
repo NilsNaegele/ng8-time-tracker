@@ -8,12 +8,12 @@ import { ElapsedTimePipe } from './pipes/elapsed-time.pipe';
 import { PluralizePipe } from './pipes/pluralize.pipe';
 import { TimePipe } from './pipes/time.pipe';
 
-import { reducers } from './reducers/root.reducer';
+import { reducers1 } from './reducers/root.reducer';
 
 @NgModule({
   imports: [
     CommonModule,
-    StoreModule.forFeature('shared', reducers),
+    StoreModule.forFeature('shared', reducers1),
   ],
   declarations: [
     ElapsedTimePipe,
@@ -26,4 +26,4 @@ import { reducers } from './reducers/root.reducer';
     PluralizePipe
   ]
 })
-export class SharedModule { }
+export class SharedTrackerModule { }

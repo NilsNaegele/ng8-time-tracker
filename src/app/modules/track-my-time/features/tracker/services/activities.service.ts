@@ -15,6 +15,7 @@ export class ActivitiesService {
   }
 
   getActivitiesOptions(): Observable<string[]> {
+    // console.log('GETACTIVITIESOPTIONS HIT');
     const activitiesItems = this.activitiesCollection.valueChanges().pipe(first());
     return activitiesItems.pipe(map(items =>
       items.sort((a, b) => a.index - b.index)

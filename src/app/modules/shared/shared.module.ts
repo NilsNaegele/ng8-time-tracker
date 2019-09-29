@@ -31,8 +31,13 @@ import { MatRippleModule } from '@angular/material/core';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 
+import { NgSelectModule } from '@ng-select/ng-select';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+
+import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const SHARED_MODULES = [
   CommonModule,
@@ -66,7 +71,11 @@ const SHARED_MODULES = [
   MatBottomSheetModule,
   ReactiveFormsModule,
   FormsModule,
-  RouterModule
+  RouterModule,
+  NgSelectModule,
+  OwlDateTimeModule,
+  OwlNativeDateTimeModule,
+  FontAwesomeModule
 ];
 
 const SHARED_COMPONENTS = [];

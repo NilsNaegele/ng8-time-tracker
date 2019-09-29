@@ -1,1 +1,18 @@
-<p>tracker works!</p>
+<div class="content">
+    <app-tracker-timer [info]="timerInfo$ | async"
+                       [elapsedTime]="elapsedTime$ | async"
+                       [activitiesOptions]="activitiesOptions$ | async"
+                       [trackedDetails]="trackedDetails$ | async"
+                       [details]="details$ | async">
+    </app-tracker-timer>
+  
+    <!-- <app-tracker-history [groups]="historyGroupings$ | async"
+                         [activitiesOptions]="activitiesOptions$ | async"
+                         [trackedDetails]="trackedDetails$ | async">
+    </app-tracker-history>
+  
+    <div *ngIf="this.showLoadMoreButton$ | async"
+         class="load-more-button">
+      <app-tracker-load-more></app-tracker-load-more>
+    </div> -->
+  </div>
