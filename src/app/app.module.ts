@@ -1,4 +1,3 @@
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +22,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './reducers/root.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { SharedTrackerModule } from './modules/track-my-time/shared/shared-tracker.module';
+import { DashboardModule } from './modules/track-my-time/features/dashboard/dashboard.module';
 
 
 @NgModule({
@@ -46,7 +46,8 @@ import { SharedTrackerModule } from './modules/track-my-time/shared/shared-track
     CoreModule,
     SharedModule,
     LayoutModule,
-    TrackerModule
+    TrackerModule,
+    DashboardModule
   ],
   providers: [ AngularFirestore ],
   bootstrap: [AppComponent]

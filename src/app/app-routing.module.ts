@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'my-super-tracker', redirectTo: '/my-tracker' },
+  { path: 'my-super-dashboard', redirectTo: '/my-dashboard' },
   {
     path: '',
     redirectTo: '/home',
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'my-super-tracker',
     loadChildren: () => import('./modules/track-my-time/features/tracker/tracker.module').then(mod => mod.TrackerModule)
+  },
+  {
+    path: 'my-super-dashboard',
+    loadChildren: () => import('./modules/track-my-time/features/dashboard/dashboard.module').then(mod => mod.DashboardModule)
   }
 ];
 

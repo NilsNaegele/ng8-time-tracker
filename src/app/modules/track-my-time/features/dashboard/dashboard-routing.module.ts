@@ -1,13 +1,12 @@
-import { TrackerComponent } from './tracker.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 
 
 
-const trackerRoutes: Routes = [
+const dashboardRoutes: Routes = [
     // { path: 'my-super-tracker', redirectTo: '/my-tracker' },
-    { path: 'my-tracker',  component: TrackerComponent }
+    { path: 'my-dashboard', component: DashboardComponent }
 //   {
 //     path: 'track-my-time',
 //     component: TrackerComponent
@@ -23,7 +22,8 @@ const trackerRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(trackerRoutes)],
+  imports: [RouterModule.forChild(dashboardRoutes)],
   exports: [RouterModule]
 })
-export class TrackerRoutingModule { }
+export class DashboardRoutingModule { }
+

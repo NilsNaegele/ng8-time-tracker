@@ -30,7 +30,7 @@ export class TrackerSideNavComponent implements OnInit {
   };
   routes: RouteEntry[] = [{
     caption: 'Dashboard',
-    router: ['/sauce-timer'],
+    router: ['/my-super-dashboard'],
     exact: true,
     icon: faChartBar,
     trackingCategory: 'navDashboard'
