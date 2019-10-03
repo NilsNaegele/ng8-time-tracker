@@ -55,7 +55,7 @@ export class UpdateActivity implements Action {
   constructor(public userId: string, public payload: UpdateHistoryItemActivityPayload) { }
 }
 
-export const UPDATE_ACTIVITY_SUCCEEDED = '[History] Update Platform Succeeded';
+export const UPDATE_ACTIVITY_SUCCEEDED = '[History] Update Activity Succeeded';
 export class UpdateActivitySucceeded implements Action {
   readonly type = UPDATE_ACTIVITY_SUCCEEDED;
   constructor(public payload: UpdateHistoryItemActivityPayload) { }

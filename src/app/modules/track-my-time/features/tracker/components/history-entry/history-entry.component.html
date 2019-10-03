@@ -14,7 +14,7 @@
               #activityEl
               [value]="item.activity"
               (change)="updateActivity(activityEl)">
-        <option value="">Platform</option>
+        <option value="">Activity</option>
         <option *ngFor="let option of activitiesOptions"
                 value="{{ option }}">{{ option }}</option>
       </select>
