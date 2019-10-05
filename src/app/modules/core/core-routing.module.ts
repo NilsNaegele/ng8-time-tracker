@@ -1,3 +1,5 @@
+import { TrainingComponent } from './fit-tracker/training/training.component';
+import { SignUpComponent } from './fit-tracker/auth/sign-up/sign-up.component';
 import { DeadlineBoxComponent } from './components/deadline-box/deadline-box.component';
 import { Timer2Component } from './components/timer2/timer2.component';
 import { AppTimerComponent } from './components/sauce-timer/dumb-components/app-timer/app-timer.component';
@@ -12,6 +14,7 @@ import { TimeboxSelectorComponent } from './components/time-box/timebox-selector
 import { TimersDisplayComponent } from './components/timers-display/timers-display.component';
 import { RunningTimeboxComponent } from './components/time-box/running-timebox/running-timebox.component';
 import { SauceTimerComponent } from './components/sauce-timer/dumb-components/sauce-timer/sauce-timer.component';
+import { LogInComponent } from './fit-tracker/auth/log-in/log-in.component';
 
 const coreRoutes: Routes = [
   {
@@ -50,7 +53,18 @@ const coreRoutes: Routes = [
     path: 'about-sauce-timer',
     component: AboutSauceTimerComponent
   },
-  // { path: 'my-tracker', redirectTo: '/my-super-tracker' },
+  {
+    path: 'signup',
+    component: SignUpComponent
+  },
+  {
+    path: 'login',
+    component: LogInComponent
+  },
+  {
+    path: 'training',
+    component: TrainingComponent
+  },
   {
     path: '**',
     redirectTo: '/'

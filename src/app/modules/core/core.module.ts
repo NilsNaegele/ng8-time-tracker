@@ -30,6 +30,10 @@ import { CountdownComponent } from './components/deadline-box/countdown/countdow
 import { EventsComponent } from './components/deadline-box/events/events.component';
 import { HallOfFameEntryComponent } from './components/deadline-box/hall-of-fame-entry/hall-of-fame-entry.component';
 import { HallOfFameComponent } from './components/deadline-box/hall-of-fame/hall-of-fame.component';
+import { SignUpComponent } from './fit-tracker/auth/sign-up/sign-up.component';
+import { LogInComponent } from './fit-tracker/auth/log-in/log-in.component';
+import { TrainingComponent } from './fit-tracker/training/training.component';
+import { CurrentTrainingComponent } from './fit-tracker/training/current-training/current-training.component';
 
 
 @NgModule({
@@ -60,7 +64,11 @@ import { HallOfFameComponent } from './components/deadline-box/hall-of-fame/hall
     CountdownComponent,
     EventsComponent,
     HallOfFameEntryComponent,
-    HallOfFameComponent
+    HallOfFameComponent,
+    SignUpComponent,
+    LogInComponent,
+    TrainingComponent,
+    CurrentTrainingComponent
   ],
   imports: [
     SharedModule,
