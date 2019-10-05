@@ -61,11 +61,11 @@ export const selectHistoryGroupingsByDate = createSelector(selectSortedHistoryIt
   const historyListItemsMap = getHistoryListItemsMap(items, item => formatDate(item.dateRange[0]));
   return getHistoryGroupingList(historyListItemsMap);
 });
-export const selectHistoryGroupingsByPlatform = createSelector(selectSortedHistoryItems, items => {
+export const selectHistoryGroupingsByActivity = createSelector(selectSortedHistoryItems, items => {
   const historyListItemsMap = getHistoryListItemsMap(items, item => item.activity);
   return getHistoryGroupingList(historyListItemsMap);
 });
-export const selectHistoryGroupingsByGame = createSelector(selectSortedHistoryItems, items => {
+export const selectHistoryGroupingsByDetails = createSelector(selectSortedHistoryItems, items => {
   const historyListItemsMap = getHistoryListItemsMap(items, item => item.details);
   return getHistoryGroupingList(historyListItemsMap);
 });
@@ -82,8 +82,8 @@ export const selectUserDataLoaded = createSelector(selectHistory, selectProgress
 
 const sharedSelectors = {
   historyGroupingsByDate: selectHistoryGroupingsByDate,
-  historyGroupingsByPlatform: selectHistoryGroupingsByPlatform,
-  historyGroupingsByGame: selectHistoryGroupingsByGame,
+  historyGroupingsByActivity: selectHistoryGroupingsByActivity,
+  historyGroupingsByDetails: selectHistoryGroupingsByDetails,
   historyLoading: selectHistoryLoading,
   historyTrackedDetails: selectTrackedDetails,
   activitiesOptions: selectActivitiesOptions,

@@ -1,0 +1,123 @@
+// global variables
+$base-font-size: 20px;
+$small-font-size: 15px;
+$base-font-family: "Roboto", sans-serif;
+
+$background-dark: #533a7b;
+$background-dark-accent: #8d69c6;
+$text-light: #e9f1f7;
+
+$background-light: #f1f5f2;
+$background-light-accent: #ddd8ff;
+
+$good-action-color: green;
+$bad-action-color: red;
+$neutral-action-color: grey;
+
+$medium-breakpoint: 1224px;
+$small-breakpoint: 500px;
+
+// tracker variables
+$sidebar-width: 215px;
+$small-sidebar-width: $sidebar-width/2;
+$content-width: calc(100% - #{$sidebar-width});
+$small-content-width: calc(100% - #{$small-sidebar-width});
+$timer-height: 80px;
+$history-entry-height: 60px;
+
+// app component variables
+$header-height: 100px;
+$main-height: calc(100vh - #{$header-height});
+
+// login component variables
+$box-height: 400px;
+$box-width: 400px;
+
+// dashboard variables
+$dashboard-header-height: 60px;
+$graphs-height: calc(100% - #{$dashboard-header-height});
+$small-dashboard-header-height: 40px;
+$small-graphs-height: calc(100% - #{$small-dashboard-header-height});
+
+// nav variables
+$small-nav-banner-height: 40px;
+
+// profile variables
+$profile-field-height: 40px;
+
+.content {
+  margin-left: 215px;
+    .dashboard {
+      height: 100%;
+      padding: 20px;
+  
+      .graphs {
+        height: $graphs-height;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+  
+        > div {
+          padding: 10px;
+          background: $background-light;
+        }
+  
+        .time-vs-date {
+          grid-column: 1 / span 1;
+          grid-row: 1 / span 1;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        }
+  
+        .time-vs-details {
+          grid-column: 1 / span 1;
+          grid-row: 2 / span 1;
+          margin-right: 10px;
+          margin-top: 10px;
+        }
+  
+        .time-vs-activity {
+          grid-column: 2 / span 1;
+          grid-row: 1 / span 2;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  
+  @media only screen  and (max-width : $small-breakpoint) {
+    .content {
+      .dashboard {
+        padding: 10px;
+        margin-top: $small-nav-banner-height;
+  
+        .graphs {
+          height: $small-graphs-height;
+          grid-template-columns: 100%;
+          grid-template-rows: 33% 33% 33%;
+  
+          .time-vs-date {
+            grid-column: 1 / span 1;
+            grid-row: 1 / span 1;
+            margin-right: 0px;
+            margin-bottom: 10px;
+          }
+  
+          .time-vs-details {
+            grid-column: 1 / span 1;
+            grid-row: 2 / span 1;
+            margin-right: 0px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+          }
+  
+          .time-vs-activity {
+            grid-column: 1 / span 1;
+            grid-row: 3 / span 1;
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }

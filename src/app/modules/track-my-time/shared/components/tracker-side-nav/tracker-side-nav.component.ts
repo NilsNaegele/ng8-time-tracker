@@ -18,7 +18,7 @@ export class TrackerSideNavComponent implements OnInit {
   @Input() trackerCaption = 'Tracker';
   trackerRoute: RouteEntry = {
     caption: 'Track My Activities',
-    router: ['/my-tracker'],
+    router: ['/my-super-tracker'],
     exact: true,
     icon: faClock,
     trackingCategory: 'navTracker'

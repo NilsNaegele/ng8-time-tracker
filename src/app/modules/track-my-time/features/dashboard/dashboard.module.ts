@@ -9,7 +9,9 @@ import { TimeDateGraphComponent } from './components/time-date-graph/time-date-g
 import { TimeDetailsGraphComponent } from './components/time-details-graph/time-details-graph.component';
 import { TimeActivityGraphComponent } from './components/time-activity-graph/time-activity-graph.component';
 
-
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './reducers/root';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { TimeActivityGraphComponent } from './components/time-activity-graph/tim
   imports: [
     SharedModule,
     SharedTrackerModule,
+    NgxChartsModule,
     DashboardRoutingModule,
+    StoreModule.forFeature('dashboard', reducers),
   ],
   exports: [ DashboardComponent ]
 })

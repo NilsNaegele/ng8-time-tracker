@@ -1,1 +1,26 @@
-<p>dashboard works!</p>
+<div class="main">
+  <app-tracker-side-nav 
+           [trackerCaption]="trackerNavCaption$ | async">
+    </app-tracker-side-nav>
+<div class="content">
+    <div class="dashboard">
+      <app-dashboard-header [rangeType]="this.dateRangeType$ | async"
+                            [totalTime]="this.totalTime$ | async"></app-dashboard-header>
+  
+      <div class="graphs">
+        <div class="time-vs-date drop-shadow">
+          <app-dashboard-time-date-graph [data]="timeVsDateGraphData$ | async"
+                                         [config]="dateGraphConfig"></app-dashboard-time-date-graph>
+        </div>
+        <div class="time-vs-details drop-shadow">
+          <app-dashboard-time-details-graph [data]="timeVsDetailsGraphData$ | async"
+                                         [config]="gameGraphConfig"></app-dashboard-time-details-graph>
+        </div>
+        <div class="time-vs-activity drop-shadow">
+          <app-dashboard-time-activity-graph [data]="timeVsActivityGraphData$ | async"
+                                             [config]="platformGraphConfig"></app-dashboard-time-activity-graph>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>

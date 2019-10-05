@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy } from '@angular/core';
+import { GraphDataItem } from '../../models/graph';
 
 @Component({
-  selector: 'app-graph-tooltip',
+  selector: 'app-dashboard-graph-tooltip',
   templateUrl: './graph-tooltip.component.html',
-  styleUrls: ['./graph-tooltip.component.scss']
+  styleUrls: ['./graph-tooltip.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GraphTooltipComponent implements OnInit {
-
+  @Input() model: GraphDataItem;
   constructor() { }
 
   ngOnInit() {
