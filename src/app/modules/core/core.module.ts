@@ -2,8 +2,8 @@ import { TimerToggleComponent } from './components/sauce-timer/smart-components/
 import { AppTimerComponent } from './components/sauce-timer/dumb-components/app-timer/app-timer.component';
 import { ActionButtonsComponent } from './components/sauce-timer/smart-components/action-buttons/action-buttons.component';
 import { NgModule } from '@angular/core';
-import {RoundProgressModule} from 'angular-svg-round-progressbar';
-
+import { RoundProgressModule } from 'angular-svg-round-progressbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { CoreRoutingModule } from './core-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { SharedModule } from '../shared/shared.module';
@@ -73,7 +73,8 @@ import { CurrentTrainingComponent } from './fit-tracker/training/current-trainin
   imports: [
     SharedModule,
     RoundProgressModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    FlexLayoutModule
   ],
   providers: [
     DatePipe,
